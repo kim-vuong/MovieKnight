@@ -1,0 +1,33 @@
+.mv-card {
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.mv-card:hover {
+    box-shadow: 0 0 0 3px #c0c0c0;
+}
+
+.mv-card-options {
+    display: none;
+}
+
+.mv-card:hover .mv-card-options {
+    background: black;
+    position: absolute;
+    bottom: 0;
+    right: 2rem;
+    display: flex;
+    width: 200px;
+    justify-content: space-around;
+}
+
+.mv-card-search {
+    display: flex;
+    flex-direction: column;
+}
+
+.mv-search-card-button {
+    border: 1px solid white;
+    padding: 0.5rem 1rem;
+}

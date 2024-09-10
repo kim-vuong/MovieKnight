@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import MovieCard from './MovieCard'
 
+import '../vanilla/movie-list.css'
+
 const API_HOST = import.meta.env.VITE_API_HOST
 if (!API_HOST) {
     throw new Error('BASE_URL is not defined')
@@ -25,9 +27,9 @@ function MovieList() {
         fetchData()
     }, [])
     return (
-        <>
-            <div>
-                <form id="searchBar" className="d-flex">
+        <div className="main-containers">
+            <div className="mv-list-searchbar-container">
+                <form id="searchBar" className="mv-list-searchbar d-flex">
                     <input
                         onChange={searchHandler}
                         placeholder="Search By Title"
@@ -60,7 +62,7 @@ function MovieList() {
                     }
                 })}
             </div>
-        </>
+        </div>
     )
 }
 

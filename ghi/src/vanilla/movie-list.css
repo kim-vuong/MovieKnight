@@ -1,0 +1,38 @@
+.mv-list-searchbar-container {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.mv-list-searchbar {
+    width: 500px;
+    height: 2.5rem;
+}
+
+#searchbar {
+    border-radius: 1.6rem;
+    padding-left: 1rem;
+    background: rgb(24, 30, 37);
+    border: 1px solid #c0c0c0;
+    color: #fff;
+}
+
+#searchbar:hover {
+    box-shadow: 0 0 0 1px #d0c0c0;
+    transition: 0.2s ease-in-out;
+}
+
+#searchbar::placeholder {
+    font-family: 'Anek Devanagari', system-ui;
+    font-size: 1.1rem;
+    color: #c0c0c0;
+    letter-spacing: 0.2px;
+}
+
+.mv-search-title {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+    font-family: 'DM Sans', system-ui;
+    font-size: 3rem;
+}

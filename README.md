@@ -6,7 +6,7 @@
 -   Max Vuong
 -   Sebastian Davis
 
-Movie Knight - your one stop shop to keep track of your movie watchlist and friend movie nights
+Movie Knight - your one stop shop to keep track of your Movie Watchlist and friend Movie Nights
 
 ## Design
 

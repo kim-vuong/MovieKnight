@@ -1,0 +1,102 @@
+.nav-bar {
+    /* border: 4px solid white; */
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem 0;
+    /* border-bottom: 1px solid rgba(102, 78, 78, 0.5); */
+    list-style: none;
+}
+
+.container-fluid {
+    margin-left: -0.7rem;
+}
+
+.right-menu {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.sign-btn,
+.your-profile {
+    white-space: nowrap;
+}
+
+.knight-logo {
+    width: 80px;
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
+
+.movie-knight-title {
+    font-family: 'Bungee Tint', sans-serif;
+    margin-left: -20px;
+    font-size: 1.8rem;
+    letter-spacing: -0.5px;
+}
+
+.nav-logo-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-blocks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+}
+
+.nav-all-add-container {
+    display: flex;
+    white-space: nowrap;
+    gap: 2.3rem;
+    margin-right: 1rem;
+}
+
+.all-nav-links {
+    font-family: 'Anek Devanagari', system-ui;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #d0d0d0;
+    position: relative;
+}
+
+.all-nav-links:hover {
+    color: #f5f5f5;
+}
+
+.all-nav-links::before {
+    background-color: #c0c0c0;
+    position: absolute;
+    content: '';
+    bottom: -7px;
+    width: 100%;
+    height: 3px;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+    transform-origin: right;
+    transform: scaleX(0);
+}
+
+.all-nav-links:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.nav-profile-pic {
+    width: 45px;
+    border-radius: 50%;
+}
+
+.your-profile {
+    display: flex;
+    align-items: center;
+}
+
+.nav-avatar {
+    margin-right: -15px;
+    margin-bottom: 5px;
+}

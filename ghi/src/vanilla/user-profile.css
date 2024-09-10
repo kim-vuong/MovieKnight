@@ -1,0 +1,269 @@
+/* User General Profile */
+
+.profile {
+    color: #c0c0c0;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.user-profile-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-top: 2.5rem;
+}
+
+/* User Movies / Carousel */
+
+.user-movies {
+    padding-right: 1.5rem;
+}
+
+.movies-2-watch,
+.watchlist-movies {
+    font-family: 'DM Sans', system-ui;
+    font-size: 1.2rem;
+}
+
+.movies-2-watch + p {
+    font-family: 'DM Sans', system-ui;
+    font-size: 1rem;
+}
+
+.mv-title {
+    color: #fff;
+    font-size: 1.6rem;
+}
+
+.movie-subtitle {
+    font-family: 'DM Sans', system-ui;
+}
+
+.slick-next:before,
+.slick-prev:before {
+    color: #fff;
+}
+
+.horizontal-movie {
+    display: inline-block;
+    text-align: center;
+}
+
+.horizontal-movie img {
+    display: inline-block;
+}
+
+.horizontal-movie:focus {
+    outline: none;
+}
+
+.horizontal-movie h3 {
+    margin-top: 0.5rem;
+}
+
+.movie-cursor {
+    cursor: pointer;
+}
+
+.movie-hover:hover {
+    box-shadow: 0 0 0 3px lightgray;
+    transition: 0.5s all;
+}
+
+.slider-container {
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.slick-dots {
+    bottom: -40px;
+}
+
+.slick-dots li button:before {
+    font-size: 8px;
+    color: #fff;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #ccc;
+}
+
+.movie-carousel-title {
+    font-family: 'Anek Devanagari', system-ui;
+    font-size: 1.1rem;
+}
+
+.carousel-word-top {
+    margin-bottom: 1rem;
+}
+
+.new-here {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    font-family: 'Anek Devanagari', system-ui;
+}
+
+.new-here b {
+    color: #fff;
+}
+
+.new-here b:hover {
+    color: lightgray;
+    transition: 0.3s ease-in-out;
+}
+
+/* User details */
+
+.detail-card {
+    padding: 2rem;
+    margin-top: 0.4rem;
+}
+
+.user-detail-button {
+    border: 2px solid #484848;
+    border-radius: 5px;
+    width: 130px;
+    padding: 0.8rem 0;
+    font-family: 'DM Sans', system-ui;
+}
+
+.user-tl-button {
+    text-align: center;
+}
+
+/* User Update / Delete Modals */
+
+.user-modal .ant-modal-content {
+    background: radial-gradient(
+        circle at 10% 20%,
+        rgb(30, 40, 50) 0%,
+        rgb(5, 5, 5) 85%
+    );
+    border: 3px solid #c0c0c0;
+    padding-top: 2rem;
+}
+
+.user-modal .ant-modal-content > button {
+    color: #c0c0c0;
+}
+
+.user-modal .ant-modal-content > button:hover {
+    color: #fff;
+    transition: 0.5s all;
+}
+
+.user-modal .ant-modal-header {
+    background: radial-gradient(
+        circle at 10% 20%,
+        rgb(30, 40, 50) 0%,
+        rgb(5, 5, 5) 100%
+    );
+}
+
+.user-modal .ant-modal-title {
+    font-family: 'Anek Devanagari', system-ui;
+    color: #c0c0c0;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.user-modal .ant-modal-confirm-title {
+    font-family: 'Anek Devanagari', system-ui;
+    font-size: 1.1rem;
+}
+
+.user-modal .ant-form-item-label > label,
+.user-modal .ant-modal-confirm-title,
+.user-modal .ant-modal-confirm-content {
+    color: #c0c0c0;
+}
+
+.user-modal .ant-form-item-control-input-content #username,
+.user-modal .ant-input,
+.user-modal .ant-input-affix-wrapper {
+    background: radial-gradient(
+        circle at 10% 20%,
+        rgb(30, 40, 50) 0%,
+        rgb(5, 5, 5) 100%
+    );
+    color: #c0c0c0;
+}
+
+.user-modal .ant-modal-confirm-btns button:nth-child(2) {
+    background: rgb(248, 1, 1);
+}
+
+.user-modal .ant-modal-confirm-btns button:nth-child(2):hover {
+    background: rgb(202, 15, 15);
+}
+
+.user-modal .ant-input-password-icon svg:first-child {
+    background: radial-gradient(
+        circle at 10% 20%,
+        rgb(30, 40, 50) 0%,
+        rgb(5, 5, 5) 100%
+    );
+    color: #fff;
+}
+
+/* User Reviews */
+
+.user-review {
+    margin: 2rem 0;
+    display: flex;
+    align-items: top;
+    gap: 2rem;
+}
+
+.break-zone {
+    max-width: 95%;
+}
+
+.movie-review-poster {
+    width: 100px;
+    min-width: 100px;
+    border-radius: 5px;
+}
+
+.movie-review-poster-a {
+    display: inline-block;
+}
+
+.my-reviews-title {
+    font-family: 'DM Sans', system-ui;
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+    color: #fff;
+}
+
+.movie-review-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+}
+
+.movie-review-title:hover {
+    color: #f5f5f5;
+    transition: 0.3s ease-in-out;
+}
+
+.rating-review {
+    margin-top: 1rem;
+}
+
+.review-word-content {
+    font-family: 'DM Sans', system-ui;
+    max-width: 90%;
+    margin-top: -5px;
+}
+
+.movie-rating {
+    margin-bottom: 0.5rem;
+}
+
+.user-num-review {
+    color: #fff;
+}
+
+.user-actual-review {
+    color: #fff;
+}

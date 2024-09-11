@@ -67,7 +67,7 @@ function MovieSearch() {
         fetchData()
     }, [])
     return (
-        <>
+        <div className="main-containers">
             <div>
                 <dialog className="block p-1 rounded shadow-lg bg-primary h-10">
                     <form
@@ -98,13 +98,13 @@ function MovieSearch() {
                                 key={movie.tmdb_id}
                                 movie={movie}
                                 buttonHandler={() => handleAdd(movie.tmdb_id)}
-                                buttonName="Add to Database"
+                                buttonName={movie.title}
                             />
                         )
                     })}
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

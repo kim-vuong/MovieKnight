@@ -31,32 +31,58 @@ export default function MovieCard({
                             alt={`${movie.title} Poster`}
                         />
                     </Link>
-                    <div className="mv-card-options">
-                        <button onClick={handleWatchedClick}>
-                            <i
-                                className="fa-solid fa-eye fa-xl"
-                                style={{ color: '#c0c0c0' }}
-                            ></i>
-                        </button>
-                        <button onClick={handleWatchListClick}>
-                            <i
-                                className="fa-solid fa-list-ul fa-xl"
-                                style={{ color: '#c0c0c0' }}
-                            ></i>
-                        </button>
-                        <Link to={`${movieLink}/review`}>
-                            <i
-                                className="fa-regular fa-pen-to-square fa-xl"
-                                style={{ color: '#c0c0c0' }}
-                            ></i>
-                        </Link>
-                    </div>
+                    {user ? (
+                        <div className="mv-card-options">
+                            <button onClick={handleWatchedClick}>
+                                <i
+                                    className="fa-solid fa-eye fa-xl"
+                                    style={{ color: '#c0c0c0' }}
+                                ></i>
+                            </button>
+                            <button onClick={handleWatchListClick}>
+                                <i
+                                    className="fa-solid fa-list-ul fa-xl"
+                                    style={{ color: '#c0c0c0' }}
+                                ></i>
+                            </button>
+                            <Link to={`${movieLink}/review`}>
+                                <i
+                                    className="fa-regular fa-pen-to-square fa-xl"
+                                    style={{ color: '#c0c0c0' }}
+                                ></i>
+                            </Link>
+                        </div>
+                    ) : (
+                        ''
+                    )}
                 </div>
             ) : (
                 ''
             )}
 
             {buttonHandler ? (
+                <div className="mv-search-card">
+                    <button
+                        onClick={buttonHandler}
+                        className="mv-card-container"
+                    >
+                        <img
+                            src={movie.image_url}
+                            alt={`${movie.title} Poster`}
+                        />
+                        <p className="overlay">
+                            <i
+                                className="fa-solid fa-plus fa-bounce fa-2xl"
+                                style={{ color: '#fff' }}
+                            ></i>
+                        </p>
+                    </button>
+                </div>
+            ) : (
+                ''
+            )}
+
+            {/* {buttonHandler ? (
                 <div className="mv-card-search">
                     <div className="mv-search-card-poster">
                         <img
@@ -76,26 +102,7 @@ export default function MovieCard({
                 </div>
             ) : (
                 ''
-            )}
-
-            {/* Dan Note: Commented out for testing */}
-            {/* <div className="card-body">
-                <h5 className="card-title">{movie.title}</h5>
-                {showdetailbutton ? (
-                    <Link to={movieLink} className="btn btn-primary">
-                        Full Details
-                    </Link>
-                ) : (
-                    ''
-                )}
-                {buttonHandler ? (
-                    <button onClick={buttonHandler} className="btn btn-success">
-                        {buttonName}
-                    </button>
-                ) : (
-                    ''
-                )}
-            </div> */}
+            )} */}
         </div>
     )
 }

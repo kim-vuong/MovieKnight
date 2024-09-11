@@ -1,12 +1,12 @@
 volumes:
-    movieknight_dm_database_volume:
-        name: movieknight_dm_database_volume
+    movieknight_database_volume:
+        name: movieknight_database_volume
 
 services:
     db:
         image: postgres:14.2-bullseye
         volumes:
-            - movieknight_dm_database_volume:/var/lib/postgresql/data
+            - movieknight_database_volume:/var/lib/postgresql/data
         environment:
             - POSTGRES_DB=${POSTGRES_DB}
             - POSTGRES_USER=${POSTGRES_USER}

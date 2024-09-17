@@ -2,6 +2,9 @@ import { useEffect, useState } from 'react'
 import MovieCard from './MovieCard'
 import { useNavigate } from 'react-router-dom'
 
+import '../vanilla/movie-list.css'
+import '../vanilla/movie-card.css'
+
 const API_HOST = import.meta.env.VITE_API_HOST
 if (!API_HOST) {
     throw new Error('VITE_API_HOST is not defined')
@@ -68,7 +71,33 @@ function MovieSearch() {
     }, [])
     return (
         <div className="main-containers">
-            <div>
+            <h1 className="mv-list-title">Add a Movie to our Database</h1>
+
+            <div className="mv-list-searchbar-container">
+                <form
+                    onSubmit={handleSubmit}
+                    className="mv-list-searchbar d-flex"
+                >
+                    <input
+                        placeholder="Search for a Movie"
+                        required
+                        value={query}
+                        onChange={(e) => setQuery(e.target.value)}
+                        type="text"
+                        name="title"
+                        id="searchbar"
+                        className="form-control search-term"
+                    />
+                    <button className="magnifying-glass-icon">
+                        <i
+                            className="fa-solid fa-magnifying-glass fa-lg"
+                            style={{ color: '#c0c0c0' }}
+                        ></i>
+                    </button>
+                </form>
+            </div>
+
+            {/* <div>
                 <dialog className="block p-1 rounded shadow-lg bg-primary h-10">
                     <form
                         className="flex justify-center gap-3"
@@ -88,10 +117,9 @@ function MovieSearch() {
                         </button>
                     </form>
                 </dialog>
-            </div>
+            </div> */}
             <div>
-                <h1 className="display-5 fw-bold">Movies</h1>
-                <div className="grid grid-cols-1 gap-4 md:grid-cols-5">
+                <div className="mt-28 grid grid-cols-1 gap-4 md:grid-cols-5">
                     {movies.map((movie) => {
                         return (
                             <MovieCard

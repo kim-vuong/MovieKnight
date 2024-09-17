@@ -1,3 +1,12 @@
+.mv-list-title {
+    font-family: 'DM Sans', system-ui;
+    font-size: 3rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
 .mv-list-searchbar-container {
     margin-bottom: 3rem;
     display: flex;
@@ -35,4 +44,12 @@
     padding-bottom: 2rem;
     font-family: 'DM Sans', system-ui;
     font-size: 3rem;
+}
+
+.magnifying-glass-icon {
+    margin-left: 0.8rem;
+}
+
+.search-term {
+    font-family: 'DM Sans', system-ui;
 }

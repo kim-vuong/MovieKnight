@@ -7,7 +7,8 @@
 }
 
 .mv-card:hover {
-    box-shadow: 0 0 0 3px #c0c0c0;
+    box-shadow: 0 0 0 2px #c0c0c0;
+    transition: 0.5s all;
 }
 
 .mv-card-options {
@@ -18,9 +19,10 @@
     background: black;
     position: absolute;
     bottom: 0;
-    right: 2rem;
+    right: 3.5rem;
     display: flex;
-    width: 200px;
+    width: 150px;
+    margin-bottom: 1rem;
     justify-content: space-around;
 }
 
@@ -41,6 +43,7 @@
 
 .mv-search-card {
     position: relative;
+    cursor: pointer;
 }
 
 .mv-search-card:hover img {
@@ -66,7 +69,7 @@
 }
 
 .overlay {
-    display: none; /* Hide overlay by default */
+    display: none;
     font-family: 'DM Sans', system-ui;
     font-weight: 600;
     font-size: 1.5rem;
@@ -75,7 +78,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 10;
+    /* z-index: 10; */
     text-align: center;
     width: 100%;
     padding: 0 10px;
@@ -83,4 +86,10 @@
 
 .mv-search-card:hover .overlay {
     display: block;
+    /* border: 1px solid white; */
+    z-index: 10;
+}
+
+.overlay > i {
+    margin-bottom: 2rem;
 }

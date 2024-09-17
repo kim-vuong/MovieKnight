@@ -61,48 +61,28 @@ export default function MovieCard({
             )}
 
             {buttonHandler ? (
-                <div className="mv-search-card">
-                    <button
+                <div className="mv-search-card" onClick={buttonHandler}>
+                    {/* <button
                         onClick={buttonHandler}
                         className="mv-card-container"
-                    >
-                        <img
-                            src={movie.image_url}
-                            alt={`${movie.title} Poster`}
-                        />
-                        <p className="overlay">
-                            <i
-                                className="fa-solid fa-plus fa-bounce fa-2xl"
-                                style={{ color: '#fff' }}
-                            ></i>
-                        </p>
-                    </button>
+                    > */}
+                    <img
+                        // onClick={buttonHandler}
+                        src={movie.image_url}
+                        alt={`${movie.title} Poster`}
+                    />
+                    <p className="overlay">
+                        <i
+                            className="fa-solid fa-plus fa-2xl"
+                            style={{ color: '#fff' }}
+                        ></i>
+                        <p>{movie.title}</p>
+                    </p>
+                    {/* </button> */}
                 </div>
             ) : (
                 ''
             )}
-
-            {/* {buttonHandler ? (
-                <div className="mv-card-search">
-                    <div className="mv-search-card-poster">
-                        <img
-                            src={movie.image_url}
-                            alt={`${movie.title} Poster`}
-                        />
-                        <p>
-                            {movie.title} ({movie.release_date.slice(0, 4)})
-                        </p>
-                    </div>
-                    <button
-                        onClick={buttonHandler}
-                        className="mv-search-card-button"
-                    >
-                        {buttonName}
-                    </button>
-                </div>
-            ) : (
-                ''
-            )} */}
         </div>
     )
 }

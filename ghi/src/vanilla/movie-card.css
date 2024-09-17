@@ -26,6 +26,10 @@
     justify-content: space-around;
 }
 
+.icon-hover:hover {
+    color: #fff !important;
+}
+
 /* Movies Search (MovieSearch) */
 
 .mv-card-container {
@@ -95,4 +99,8 @@
 
 .overlay > i {
     margin-bottom: 2rem;
+}
+
+.mv-search-card-poster-title {
+    font-family: 'Anek Devanagari', system-ui;
 }

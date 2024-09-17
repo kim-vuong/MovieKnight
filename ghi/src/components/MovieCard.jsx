@@ -35,19 +35,19 @@ export default function MovieCard({
                         <div className="mv-card-options">
                             <button onClick={handleWatchedClick}>
                                 <i
-                                    className="fa-solid fa-eye fa-xl"
+                                    className="fa-solid fa-eye fa-xl icon-hover"
                                     style={{ color: '#c0c0c0' }}
                                 ></i>
                             </button>
                             <button onClick={handleWatchListClick}>
                                 <i
-                                    className="fa-solid fa-list-ul fa-xl"
+                                    className="fa-solid fa-list-ul fa-xl icon-hover"
                                     style={{ color: '#c0c0c0' }}
                                 ></i>
                             </button>
                             <Link to={`${movieLink}/review`}>
                                 <i
-                                    className="fa-regular fa-pen-to-square fa-xl"
+                                    className="fa-regular fa-pen-to-square fa-xl icon-hover"
                                     style={{ color: '#c0c0c0' }}
                                 ></i>
                             </Link>
@@ -76,7 +76,10 @@ export default function MovieCard({
                             className="fa-solid fa-plus fa-2xl"
                             style={{ color: '#fff' }}
                         ></i>
-                        <p>{movie.title}</p>
+                        <p className="mv-search-card-poster-title">
+                            {movie.title}
+                        </p>
+                        <p>({movie.release_date.slice(0, 4)})</p>
                     </div>
                     {/* </button> */}
                 </div>

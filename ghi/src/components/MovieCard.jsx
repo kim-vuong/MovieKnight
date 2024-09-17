@@ -71,13 +71,13 @@ export default function MovieCard({
                         src={movie.image_url}
                         alt={`${movie.title} Poster`}
                     />
-                    <p className="overlay">
+                    <div className="overlay">
                         <i
                             className="fa-solid fa-plus fa-2xl"
                             style={{ color: '#fff' }}
                         ></i>
                         <p>{movie.title}</p>
-                    </p>
+                    </div>
                     {/* </button> */}
                 </div>
             ) : (

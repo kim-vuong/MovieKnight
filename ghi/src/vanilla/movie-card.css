@@ -8,7 +8,7 @@
 
 .mv-card:hover {
     box-shadow: 0 0 0 2px #c0c0c0;
-    transition: 0.5s all;
+    transition: 0.3s all;
 }
 
 .mv-card-options {
@@ -42,6 +42,8 @@
 }
 
 .mv-search-card {
+    border-radius: 8px;
+    overflow: hidden;
     position: relative;
     cursor: pointer;
 }
@@ -60,12 +62,13 @@
     background-color: rgba(0, 0, 0, 0.7);
     opacity: 0;
     transition: opacity 0.3s ease;
-    z-index: 5;
+    z-index: 2;
 }
 
 .mv-search-card:hover::before {
     opacity: 1;
     border: 2px solid #c0c0c0;
+    border-radius: 8px;
 }
 
 .overlay {
@@ -78,7 +81,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* z-index: 10; */
     text-align: center;
     width: 100%;
     padding: 0 10px;
@@ -87,7 +89,8 @@
 .mv-search-card:hover .overlay {
     display: block;
     /* border: 1px solid white; */
-    z-index: 10;
+    z-index: 3;
+    transition: 0.3s all;
 }
 
 .overlay > i {

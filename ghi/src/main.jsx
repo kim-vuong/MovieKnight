@@ -1,10 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import 'antd/dist/reset.css'
+import App from './App'
 import SignInForm from './components/SignInForm'
 import SignUpForm from './components/SignUpForm'
-import App from './App'
 import AuthProvider from './components/AuthProvider'
 import MovieDetail from './components/MovieDetail'
 import MovieList from './components/MovieList'
@@ -16,9 +15,11 @@ import UserProfile from './components/UserProfile'
 import TierListWithoutTrending from './components/TierListWithoutTrending'
 import MovieNightDetail from './components/MovieNightDetail'
 import DisplayTierList from './components/DisplayTierList'
-import './index.css'
 import GetRandomMoviePick from './components/RandomMoviePickButton'
+import LandingPage from './components/LandingPage'
 
+import './index.css'
+import 'antd/dist/reset.css'
 
 const BASE_URL = import.meta.env.BASE_URL
 if (!BASE_URL) {
@@ -31,6 +32,10 @@ const router = createBrowserRouter(
             path: '/',
             element: <App />,
             children: [
+                {
+                    index: true,
+                    element: <LandingPage />,
+                },
                 {
                     path: 'signup',
                     element: <SignUpForm />,
@@ -80,7 +85,7 @@ const router = createBrowserRouter(
                     element: <DisplayTierList />,
                 },
                 {
-                    path:'/random-pick',
+                    path: '/random-pick',
                     element: <GetRandomMoviePick />,
                 },
             ],

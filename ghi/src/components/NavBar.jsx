@@ -29,7 +29,7 @@ export default function Nav() {
                     </NavLink>
                 </div>
                 <NavLink to="/profile" className="your-profile all-nav-links">
-                    <p>YOUR PROFILE</p>
+                    YOUR PROFILE
                 </NavLink>
                 <NavLink
                     className="all-nav-links cursor-pointer"

@@ -38,7 +38,7 @@ export default function LandingPage() {
                 and family.
             </p>
             <Link to="/signup" className="lp-main-button">
-                BUTTON
+                Get Started
             </Link>
             {movies.length >= 50 ? (
                 <div

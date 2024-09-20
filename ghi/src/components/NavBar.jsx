@@ -75,7 +75,11 @@ export default function Nav() {
                         </NavLink>
                     </div>
 
-                    <div className="nav-all-add-container">
+                    <div
+                        className={`nav-all-add-container ${
+                            isLoggedIn ? 'loggedin-nav-all-add-container' : ''
+                        } `}
+                    >
                         <NavLink to="/movies" className="all-nav-links">
                             ALL MOVIES
                         </NavLink>

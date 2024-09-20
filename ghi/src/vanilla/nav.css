@@ -24,7 +24,7 @@
 }
 
 .knight-logo {
-    width: 80px;
+    width: 60px;
     margin-top: 1rem;
     margin-right: 1rem;
 }
@@ -32,7 +32,7 @@
 .movie-knight-title {
     font-family: 'Bungee Tint', sans-serif;
     margin-left: -20px;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     letter-spacing: -0.5px;
 }
 
@@ -46,14 +46,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 3rem;
+    /* gap: 3rem; */
 }
 
 .nav-all-add-container {
     display: flex;
-    white-space: nowrap;
-    gap: 2.3rem;
-    margin-right: 1rem;
+    gap: 2.5rem;
+    margin-right: 4.5rem;
+}
+
+.loggedin-nav-all-add-container {
+    margin-left: 6rem;
 }
 
 .all-nav-links {

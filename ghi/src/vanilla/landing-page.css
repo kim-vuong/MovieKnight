@@ -18,6 +18,7 @@
 }
 
 .lp-scroll {
+    border: 1px solid #c0c0c0;
     position: relative;
     display: flex;
     width: 1350px;
@@ -64,7 +65,7 @@
     font-weight: 700;
     letter-spacing: -2px;
     color: #c72c3b;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .lp-main-descrip {
@@ -86,9 +87,37 @@
     border-radius: 2rem;
     padding: 1.2rem 2.7rem;
     background-color: #c0c0c0;
-    transition: transform 0.2s ease-in, padding 0.2s ease-in;
+    transition: transform 0.1s ease-in, padding 0.1s ease-in;
+    margin-bottom: 4rem;
 }
 
 .lp-main-button:hover {
     transform: scale(0.95);
+}
+
+/* HERO STILL SLIDE (Only shows when there are less than 20 movies in DB */
+
+.hero-still-container {
+    border: 1px solid #c0c0c0;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    position: relative;
+    gap: 1rem;
+    -webkit-mask-image: linear-gradient(
+        90deg,
+        transparent,
+        #000 25%,
+        #000 75%,
+        transparent
+    );
+}
+
+.hero-still-container div {
+    white-space: nowrap;
+}
+
+.hero-still-poster {
+    display: inline-flex;
+    width: 200px;
 }

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { tryFetch } from '../utils'
+import HeroStillSlide from './HeroStillSlide'
 
 import '../vanilla/landing-page.css'
 
@@ -37,6 +38,7 @@ export default function LandingPage() {
                 curate watchlists, reviews, and host movie nights with friends
                 and family.
             </p>
+
             <Link to="/signup" className="lp-main-button">
                 Get Started
             </Link>
@@ -61,7 +63,7 @@ export default function LandingPage() {
                         {movies.map((movie) => {
                             return (
                                 <img
-                                    key={`{movie.id}-duplicate`}
+                                    key={`${movie.id}-duplicate`}
                                     src={movie.image_url}
                                     alt={`${movie.title} Poster`}
                                     className="lp-mv-poster"
@@ -71,7 +73,7 @@ export default function LandingPage() {
                     </div>
                 </div>
             ) : (
-                ''
+                <HeroStillSlide />
             )}
         </div>
     )

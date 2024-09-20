@@ -29,7 +29,8 @@
     width: 800px;
     font-size: 1.15rem;
     color: #fff;
-    letter-spacing: -0.8px;
+    letter-spacing: -0.5px;
+    line-height: 1.7rem;
 }
 
 .mv-detail-genres {

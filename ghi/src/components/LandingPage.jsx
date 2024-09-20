@@ -20,7 +20,6 @@ export default function LandingPage() {
             if (movieResponse instanceof Error) {
                 console.error(`Failed to fetch movies: ${movieResponse}`)
             } else {
-                console.log(movieResponse)
                 setMovies(movieResponse)
             }
         }

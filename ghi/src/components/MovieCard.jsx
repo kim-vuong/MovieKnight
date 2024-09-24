@@ -68,8 +68,11 @@ export default function MovieCard({
                             className="fa-solid fa-plus fa-2xl"
                             style={{ color: '#fff' }}
                         ></i>
-                        <p className="mv-search-card-poster-title">
+                        <p className="mv-search-card-poster-title mt-2">
                             {movie.title}
+                        </p>
+                        <p className="mv-search-card-poster-tagline text-sm -mt-4">
+                            {movie.tagline}
                         </p>
                         <p>({movie.release_date.slice(0, 4)})</p>
                     </div>

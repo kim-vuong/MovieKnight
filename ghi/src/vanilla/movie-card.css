@@ -17,12 +17,14 @@
 
 .mv-card:hover .mv-card-options {
     background: black;
+    padding: 0.7rem 0.5rem;
+    border-radius: 8px;
     position: absolute;
-    bottom: 0;
-    right: 3.5rem;
+    bottom: 0.5rem;
+    right: 50%;
+    transform: translateX(50%);
     display: flex;
     width: 150px;
-    margin-bottom: 1rem;
     justify-content: space-around;
 }
 

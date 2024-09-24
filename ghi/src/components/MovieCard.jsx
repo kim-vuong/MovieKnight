@@ -62,15 +62,7 @@ export default function MovieCard({
 
             {buttonHandler ? (
                 <div className="mv-search-card" onClick={buttonHandler}>
-                    {/* <button
-                        onClick={buttonHandler}
-                        className="mv-card-container"
-                    > */}
-                    <img
-                        // onClick={buttonHandler}
-                        src={movie.image_url}
-                        alt={`${movie.title} Poster`}
-                    />
+                    <img src={movie.image_url} alt={`${movie.title} Poster`} />
                     <div className="overlay">
                         <i
                             className="fa-solid fa-plus fa-2xl"
@@ -81,7 +73,6 @@ export default function MovieCard({
                         </p>
                         <p>({movie.release_date.slice(0, 4)})</p>
                     </div>
-                    {/* </button> */}
                 </div>
             ) : (
                 ''

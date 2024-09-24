@@ -35,19 +35,19 @@ export default function MovieCard({
                         <div className="mv-card-options">
                             <button onClick={handleWatchedClick}>
                                 <i
-                                    className="fa-solid fa-eye fa-xl icon-hover"
+                                    className="fa-solid fa-eye fa-lg icon-hover"
                                     style={{ color: '#c0c0c0' }}
                                 ></i>
                             </button>
                             <button onClick={handleWatchListClick}>
                                 <i
-                                    className="fa-solid fa-list-ul fa-xl icon-hover"
+                                    className="fa-solid fa-bookmark fa-lg icon-hover"
                                     style={{ color: '#c0c0c0' }}
                                 ></i>
                             </button>
                             <Link to={`${movieLink}/review`}>
                                 <i
-                                    className="fa-regular fa-pen-to-square fa-xl icon-hover"
+                                    className="fa-regular fa-pen-to-square fa-lg icon-hover"
                                     style={{ color: '#c0c0c0' }}
                                 ></i>
                             </Link>

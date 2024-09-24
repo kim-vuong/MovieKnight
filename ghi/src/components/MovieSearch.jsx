@@ -90,7 +90,7 @@ function MovieSearch() {
                     />
                     <button className="magnifying-glass-icon">
                         <i
-                            className="fa-solid fa-magnifying-glass fa-lg"
+                            className="fa-solid fa-magnifying-glass fa-lg mag-glass-hover"
                             style={{ color: '#c0c0c0' }}
                         ></i>
                     </button>

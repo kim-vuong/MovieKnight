@@ -105,3 +105,7 @@
 .mv-search-card-poster-title {
     font-family: 'Anek Devanagari', system-ui;
 }
+
+.mag-glass-hover:hover {
+    color: #fff !important;
+}

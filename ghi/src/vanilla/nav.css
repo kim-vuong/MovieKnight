@@ -52,11 +52,11 @@
 .nav-all-add-container {
     display: flex;
     gap: 2.5rem;
-    margin-right: 4.5rem;
+    margin-right: 7.3rem;
 }
 
 .loggedin-nav-all-add-container {
-    margin-left: 6rem;
+    margin-left: 7rem;
 }
 
 .all-nav-links {

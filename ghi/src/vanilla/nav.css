@@ -59,6 +59,10 @@
     margin-left: 7rem;
 }
 
+.loggedout-nav {
+    margin-left: 2.8rem;
+}
+
 .all-nav-links {
     font-family: 'Anek Devanagari', system-ui;
     font-size: 1.1rem;

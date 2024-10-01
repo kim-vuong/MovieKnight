@@ -378,7 +378,6 @@ class MovieQueries:
         try:
             with pool.connection() as conn:
                 with conn.cursor(row_factory=class_row(RatedItem)) as cur:
-                    print(f"Fetching reviews for movie id: {movie_id}")
                     result = cur.execute(
                         """--sql
                             SELECT
@@ -397,7 +396,6 @@ class MovieQueries:
                         {"movie_id": movie_id},
                     )
                     reviews = result.fetchall()
-                    print(f"Reviews fetched: {reviews}")
                     return reviews
         except psycopg.Error as e:
             print(e)

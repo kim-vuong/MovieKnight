@@ -15,6 +15,7 @@ from models.movies import (
     MovieRequest,
     Genre,
 )
+from models.rated_items import RatedItem
 from utils.exceptions import (
     DatabaseURLException,
     MovieNotFoundException,
@@ -366,6 +367,38 @@ class MovieQueries:
                         )
                     conn.commit()
                     return f"Movie at id: {id} has been successfully deleted"
+        except psycopg.Error as e:
+            print(e)
+            pass
+
+    def get_reviews_for_movie(self, movie_id: int) -> list[RatedItem] | None:
+        """
+        Gets all reviews for a specific movie
+        """
+        try:
+            with pool.connection() as conn:
+                with conn.cursor(row_factory=class_row(RatedItem)) as cur:
+                    print(f"Fetching reviews for movie id: {movie_id}")
+                    result = cur.execute(
+                        """--sql
+                            SELECT
+                                rated_items.id,
+                                rated_items.user_id,
+                                rated_items.movie_id,
+                                rated_items.user_rating,
+                                rated_items.review,
+                                rated_items.watched,
+                                rated_items.tier,
+                                users.username
+                            FROM rated_items
+                            JOIN users ON rated_items.user_id = users.id
+                            WHERE rated_items.movie_id = %(movie_id)s
+                        """,
+                        {"movie_id": movie_id},
+                    )
+                    reviews = result.fetchall()
+                    print(f"Reviews fetched: {reviews}")
+                    return reviews
         except psycopg.Error as e:
             print(e)
             pass

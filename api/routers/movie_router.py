@@ -14,6 +14,8 @@ from models.movies import (
     MovieDeleteResponse,
 )
 
+from models.rated_items import RatedItem
+
 router = APIRouter(tags=["Movies"], prefix="/api/movies")
 
 
@@ -74,3 +76,11 @@ def movie_create(
     except DatabaseURLException as e:
         print(e)
         raise HTTPException(status_code=400, detail="Couldn't create Movie")
+
+
+@router.get("/{id}/reviews")
+def get_movie_reviews(
+    id: int, queries: MovieQueries = Depends()
+) -> list[RatedItem] | None:
+    reviews = queries.get_reviews_for_movie(id)
+    return reviews

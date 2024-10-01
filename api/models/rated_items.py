@@ -21,6 +21,7 @@ class RatedItemBase(BaseModel):
     review: Optional[str] = None
     watched: bool
     tier: Optional[Tier] = None
+    username: str
 
 
 class RatedItemCreate(RatedItemBase):

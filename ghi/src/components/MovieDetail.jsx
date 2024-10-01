@@ -27,6 +27,7 @@ export default function MovieDetail() {
     }
     const URL = `${API_HOST}/api${location.pathname}`
     const [movie, setMovie] = useState(null)
+    const [reviews, setReviews] = useState([])
     const fetchData = async () => {
         const response = await fetch(URL)
         if (response.ok) {
@@ -34,9 +35,21 @@ export default function MovieDetail() {
             setMovie(data)
         }
     }
+    // console.log(movie)
+    // console.log(URL)
+
+    const fetchReviews = async () => {
+        const reviewResponse = await fetch(`${URL}/reviews`)
+        if (reviewResponse.ok) {
+            const reviewData = await reviewResponse.json()
+            setReviews(reviewData)
+            console.log(reviewData)
+        }
+    }
 
     useEffect(() => {
         fetchData()
+        fetchReviews()
     }, [])
 
     const checkForExistingRI = async (userId, movieId) => {

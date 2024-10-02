@@ -4,6 +4,7 @@ import useAuthService from '../hooks/useAuthService'
 import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { tryFetch } from '../utils'
+import MovieDetailReviews from './MovieDetailReviews'
 
 import '../vanilla/movie-detail.css'
 
@@ -35,7 +36,7 @@ export default function MovieDetail() {
             setMovie(data)
         }
     }
-    // console.log(movie)
+    console.log(movie)
     // console.log(URL)
 
     const fetchReviews = async () => {
@@ -248,6 +249,7 @@ export default function MovieDetail() {
                         </div>
                     </div>
                 </div>
+                <MovieDetailReviews reviews={reviews} movie={movie} />
             </div>
         </>
     )

@@ -388,7 +388,8 @@ class MovieQueries:
                                 rated_items.review,
                                 rated_items.watched,
                                 rated_items.tier,
-                                users.username
+                                users.username,
+                                users.picture_url
                             FROM rated_items
                             JOIN users ON rated_items.user_id = users.id
                             WHERE rated_items.movie_id = %(movie_id)s

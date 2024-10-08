@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom'
 
 export default function MovieDetailReviews({ reviews, movie }) {
     return (
-        <section className="mv-detail-reviews-container mt-40">
-            <h1 className="text-3xl text-white font-semibold">Reviews</h1>
-            <div className="mv-detail-single-review mt-14 max-w-[750px] flex-row">
+        <section className="mv-detail-reviews-container mt-40 border-t-2 border-b-2 rounded-xl border-slate-400 p-5">
+            <h1 className="text-3xl text-white font-semibold">User Reviews</h1>
+            <div className="mv-detail-single-review mt-14 flex-row">
                 {reviews.length === 0 ||
                 (reviews.length === 1 && reviews[0].review === '') ? (
                     <div className="no-review-container text-gray-300">
@@ -27,9 +27,9 @@ export default function MovieDetailReviews({ reviews, movie }) {
                         return review.review ? (
                             <div
                                 key={review.id}
-                                className={`review-box flex flex-row gap-3 items-start pb-3 ${
+                                className={`review-box flex flex-row gap-3 items-start ${
                                     index !== reviews.length - 1
-                                        ? 'border-b-2 border-gray-700 mb-8'
+                                        ? 'border-b-2 border-gray-800 mb-8 pb-3'
                                         : ''
                                 }`}
                             >
@@ -52,7 +52,7 @@ export default function MovieDetailReviews({ reviews, movie }) {
                                         </span>{' '}
                                         / 5
                                     </p>
-                                    <p className="text-white text-[1rem] font-dmSans tracking-tight leading-5 max-w-[700px]">
+                                    <p className="text-white text-[1.05rem] font-dmSans tracking-tight leading-6 max-w-[700px]">
                                         {review.review}
                                     </p>
                                 </div>

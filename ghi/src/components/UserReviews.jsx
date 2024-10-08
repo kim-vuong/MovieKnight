@@ -58,13 +58,20 @@ export default function UserReviews() {
         .filter((movie) => movie !== undefined)
 
     return (
-        <div className="user-reviews mt-32 review-border-top">
-            <h2 className="my-reviews-title">My Reviews:</h2>
+        <div className="user-reviews mt-32 review-border-top border-t-2 border-b-2 rounded-xl border-slate-600 py-9">
+            <h2 className="my-reviews-title">My Reviews</h2>
             {userMovies.length ? (
                 <div className="reviews-container">
-                    {userMovies.map((movie) => {
+                    {userMovies.map((movie, index) => {
                         return (
-                            <div key={movie.movie_id} className="movie-key">
+                            <div
+                                key={movie.movie_id}
+                                className={`movie-key ${
+                                    index !== userMovies.length - 1
+                                        ? 'my-6 border-b-2 border-slate-800'
+                                        : ''
+                                }`}
+                            >
                                 <div className="user-review">
                                     <Link
                                         to={`/movies/${movie.movie_id}`}
@@ -102,7 +109,7 @@ export default function UserReviews() {
                                         </div>
                                     </div>
                                 </div>
-                                <hr className="break-zone" />
+                                {/* <hr className="break-zone" /> */}
                             </div>
                         )
                     })}

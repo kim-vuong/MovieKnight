@@ -28,7 +28,8 @@ export default function MovieDetailReviews({ reviews, movie }) {
                             <div
                                 key={review.id}
                                 className={`review-box flex flex-row gap-3 items-start ${
-                                    index !== reviews.length - 1
+                                    index !== reviews.length - 1 &&
+                                    reviews[index + 1].review
                                         ? 'border-b-2 border-gray-800 mb-8 pb-3'
                                         : ''
                                 }`}

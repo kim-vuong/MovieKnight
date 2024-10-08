@@ -36,7 +36,7 @@ export default function MovieDetail() {
             setMovie(data)
         }
     }
-    console.log(movie)
+    // console.log(movie)
     // console.log(URL)
 
     const fetchReviews = async () => {
@@ -44,7 +44,6 @@ export default function MovieDetail() {
         if (reviewResponse.ok) {
             const reviewData = await reviewResponse.json()
             setReviews(reviewData)
-            console.log(reviewData)
         }
     }
 

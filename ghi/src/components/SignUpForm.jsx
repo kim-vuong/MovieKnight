@@ -28,7 +28,7 @@ export default function SignInForm() {
                 onSubmit={handleFormSubmit}
                 className="border-t-2 border-b-2 rounded-xl border-slate-500 py-10"
             >
-                <div className="flex flex-col gap-3 px-20 py-10">
+                <div className="flex flex-col gap-3 px-20 py-4">
                     <div className="su-header">
                         <p className="text-sm">
                             Your Cinematic Adventure Awaits!

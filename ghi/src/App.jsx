@@ -1,5 +1,6 @@
-import { Outlet } from 'react-router-dom'
+import { Outlet, useLocation } from 'react-router-dom'
 import Nav from './components/NavBar'
+import Footer from './components/Footer'
 
 import './vanilla/app.css'
 
@@ -9,13 +10,18 @@ if (!API_HOST) {
 }
 
 function App() {
+    const location = useLocation()
+    const isProfilePage = location.pathname === '/profile'
+
     return (
         <div className="App">
-            <Nav />
-            <header className="App-header"></header>
+            <header>
+                <Nav />
+            </header>
             <div>
                 <Outlet />
             </div>
+            {!isProfilePage && <Footer />}
         </div>
     )
 }

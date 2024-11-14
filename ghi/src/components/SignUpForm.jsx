@@ -19,7 +19,7 @@ export default function SignInForm() {
     }
 
     if (user) {
-        return <Navigate to="/" />
+        return <Navigate to="/profile" />
     }
 
     return (

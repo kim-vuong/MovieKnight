@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { tryFetch } from '../utils'
 import HeroStillSlide from './HeroStillSlide'
+import About from './About'
 
 import '../vanilla/landing-page.css'
 
@@ -27,53 +28,56 @@ export default function LandingPage() {
     }, [])
 
     return (
-        <div className="main-containers lp-main">
-            <h1 className="lp-main-h1">Your Ultimate Film Companion</h1>
-            <p className="lp-main-subtitle">
-                Curate, Review, and Celebrate Together
-            </p>
-            <p className="lp-main-descrip">
-                MovieKnight is your one-stop-shop to track movies watched,
-                curate watchlists, reviews, and host movie nights with friends
-                and family.
-            </p>
+        <>
+            <div className="main-containers lp-main">
+                <h1 className="lp-main-h1">Your Ultimate Film Companion</h1>
+                <p className="lp-main-subtitle">
+                    Curate, Review, and Celebrate Together
+                </p>
+                <p className="lp-main-descrip">
+                    MovieKnight is your one-stop-shop to track movies watched,
+                    curate watchlists, reviews, and host movie nights with
+                    friends and family.
+                </p>
 
-            <Link to="/signup" className="lp-main-button">
-                Get Started
-            </Link>
-            {movies.length >= 50 ? (
-                <div
-                    className="lp-scroll"
-                    style={{
-                        '--time': `${movies.length * 3}s`,
-                    }}
-                >
-                    <div>
-                        {movies.map((movie) => {
-                            return (
-                                <img
-                                    key={movie.id}
-                                    src={movie.image_url}
-                                    alt={`${movie.title} Poster`}
-                                    className="lp-mv-poster"
-                                />
-                            )
-                        })}
-                        {movies.map((movie) => {
-                            return (
-                                <img
-                                    key={`${movie.id}-duplicate`}
-                                    src={movie.image_url}
-                                    alt={`${movie.title} Poster`}
-                                    className="lp-mv-poster"
-                                />
-                            )
-                        })}
+                <Link to="/signup" className="lp-main-button">
+                    Get Started
+                </Link>
+                {movies.length >= 50 ? (
+                    <div
+                        className="lp-scroll"
+                        style={{
+                            '--time': `${movies.length * 3}s`,
+                        }}
+                    >
+                        <div>
+                            {movies.map((movie) => {
+                                return (
+                                    <img
+                                        key={movie.id}
+                                        src={movie.image_url}
+                                        alt={`${movie.title} Poster`}
+                                        className="lp-mv-poster"
+                                    />
+                                )
+                            })}
+                            {movies.map((movie) => {
+                                return (
+                                    <img
+                                        key={`${movie.id}-duplicate`}
+                                        src={movie.image_url}
+                                        alt={`${movie.title} Poster`}
+                                        className="lp-mv-poster"
+                                    />
+                                )
+                            })}
+                        </div>
                     </div>
-                </div>
-            ) : (
-                <HeroStillSlide />
-            )}
-        </div>
+                ) : (
+                    <HeroStillSlide />
+                )}
+            </div>
+            <About />
+        </>
     )
 }

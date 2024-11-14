@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Navigate, Link } from 'react-router-dom'
+import { Navigate, Link, useNavigate } from 'react-router-dom'
 
 import useAuthService from '../hooks/useAuthService'
 import '../vanilla/signup.css'
@@ -9,14 +9,23 @@ export default function SignInForm() {
     const [password, setPassword] = useState('')
     const [passwordMismatch, setPasswordMismatch] = useState('')
     const { signin, user, error } = useAuthService()
+    const navigate = useNavigate()
 
     async function handleFormSubmit(e) {
         e.preventDefault()
 
+        if (!username || !password) {
+            setPasswordMismatch('Please enter both username and password')
+            return
+        }
+
+        const result = await signin({ username, password })
+        navigate('/profile')
+
         {
-            error
-                ? setPasswordMismatch('Incorrect Password. Please try again')
-                : await signin({ username, password })
+            result.error
+                ? setPasswordMismatch('Incorrect Credentials. Please try again')
+                : setPasswordMismatch('')
         }
     }
 
@@ -63,7 +72,7 @@ export default function SignInForm() {
                     >
                         Sign In
                     </button>
-                    {error && (
+                    {!user && (
                         <div className="error text-red-500 font-bold">
                             {passwordMismatch}
                         </div>

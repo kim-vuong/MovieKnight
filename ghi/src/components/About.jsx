@@ -6,13 +6,11 @@ export default function About() {
                     <h2 className="font-bold text-4xl text-[#d52b1e] mb-10">
                         Browse all of our Movies
                     </h2>
-                    <div className="w-[70%] text-lg text-white leading-7">
+                    <div className="w-[85%] text-lg text-white leading-7">
                         <p>
                             Whether you're a fan of fast-paced thrillers,
                             thought-provoking documentaries, or epic fantasy
                             adventures, you'll find something to suit your mood.
-                        </p>
-                        <p>
                             With our user-friendly interface, you can easily
                             browse through our extensive movie library. Create
                             and curate personalized watchlists, discover hidden
@@ -27,17 +25,17 @@ export default function About() {
                     className="w-[40%]"
                 />
             </div>
-            <div className="section-2 flex justify-between gap-20 mb-40 font-dmSans">
+            <div className="section-2 flex justify-between gap-40 mb-40 font-dmSans">
                 <img
                     src="public/quickadd.png"
                     alt="How to quickly add a movie to your watchlist, watched, or add a review"
-                    className="w-[50%]"
+                    className="w-[48%]"
                 />
                 <div>
                     <h2 className="font-bold text-4xl text-[#d52b1e] mb-10">
                         Effortless Movie Management
                     </h2>
-                    <div className="text-lg leading-7 text-white w-[80%]">
+                    <div className="text-lg leading-7 text-white">
                         <p>
                             With our streamlined features, managing your movie
                             experience has never been easier! Whether you're
@@ -48,11 +46,6 @@ export default function About() {
                             Simply add any movie to your Watchlist for easy
                             access later.
                         </p>
-                        <p>
-                            These quick actions help you stay organized and
-                            engaged, all in one place. Your movie collection,
-                            your rules. Manage it exactly the way you want!
-                        </p>
                     </div>
                 </div>
             </div>
@@ -61,7 +54,7 @@ export default function About() {
                     <h2 className="font-bold text-4xl text-[#d52b1e] mb-10">
                         Share Your Movies to our Movie Database
                     </h2>
-                    <div className="w-[70%] text-lg text-white leading-7">
+                    <div className="w-[80%] text-lg text-white leading-7">
                         <p>
                             Found a movie you love or one you think is a hidden
                             gem? With just a click, you can add it to our

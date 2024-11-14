@@ -43,7 +43,7 @@ export default function LandingPage() {
                 <Link to="/signup" className="lp-main-button">
                     Get Started
                 </Link>
-                {movies.length >= 50 ? (
+                {movies.length >= 10 ? (
                     <div
                         className="lp-scroll"
                         style={{

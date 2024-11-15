@@ -1,4 +1,5 @@
 import { Outlet, useLocation } from 'react-router-dom'
+import { ToastContainer } from 'react-toastify'
 import Nav from './components/NavBar'
 import Footer from './components/Footer'
 
@@ -25,6 +26,12 @@ function App() {
                 <Outlet />
             </div>
             {!nonFooterPages && <Footer />}
+            <ToastContainer
+                position="bottom-right"
+                toastClassName={() =>
+                    'font-dmSans bg-neutral-900/70 text-neutral-200'
+                }
+            />
         </div>
     )
 }

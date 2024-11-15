@@ -78,7 +78,7 @@ export default function SignInForm() {
                             {passwordMismatch}
                         </div>
                     )}
-                    <p className="-mt-2">
+                    <p className="-mt-8">
                         Don't have an account?{' '}
                         <Link
                             to="/signup"

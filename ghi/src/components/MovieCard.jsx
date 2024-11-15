@@ -1,24 +1,23 @@
-import { Link } from 'react-router-dom'
 import useAuthService from '../hooks/useAuthService'
+import { Link } from 'react-router-dom'
 import { handleAddToWatchLater, handleAddToWatched } from '../utils'
+import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 import '../vanilla/movie-card.css'
 
-export default function MovieCard({
-    movie,
-    buttonHandler,
-    buttonName,
-    showdetailbutton,
-}) {
+export default function MovieCard({ movie, buttonHandler, showdetailbutton }) {
     const { user } = useAuthService()
     const movieLink = `/movies/${movie.id}`
 
     const handleWatchListClick = async (event) => {
         handleAddToWatchLater(event, user, movie)
+        toast.success(`${movie.title} added to your Watchlist!`)
     }
 
     const handleWatchedClick = async (event) => {
         handleAddToWatched(event, user, movie)
+        toast.success(`${movie.title} marked as watched!`)
     }
 
     return (
@@ -33,18 +32,18 @@ export default function MovieCard({
                     </Link>
                     {user ? (
                         <div className="mv-card-options">
-                            <button onClick={handleWatchedClick}>
+                            <Link onClick={handleWatchedClick}>
                                 <i
                                     className="fa-solid fa-eye fa-lg icon-hover"
                                     style={{ color: '#c0c0c0' }}
                                 ></i>
-                            </button>
-                            <button onClick={handleWatchListClick}>
+                            </Link>
+                            <Link onClick={handleWatchListClick}>
                                 <i
                                     className="fa-solid fa-bookmark fa-lg icon-hover"
                                     style={{ color: '#c0c0c0' }}
                                 ></i>
-                            </button>
+                            </Link>
                             <Link to={`${movieLink}/review`}>
                                 <i
                                     className="fa-regular fa-pen-to-square fa-lg icon-hover"

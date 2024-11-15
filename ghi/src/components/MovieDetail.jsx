@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { tryFetch } from '../utils'
 import MovieDetailReviews from './MovieDetailReviews'
+import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 import '../vanilla/movie-detail.css'
 
@@ -36,8 +38,6 @@ export default function MovieDetail() {
             setMovie(data)
         }
     }
-    // console.log(movie)
-    // console.log(URL)
 
     const fetchReviews = async () => {
         const reviewResponse = await fetch(`${URL}/reviews`)
@@ -90,7 +90,10 @@ export default function MovieDetail() {
                     : `${API_HOST}/api/rated-items`,
                 config
             )
-            if (response.ok) navigate('/profile')
+            if (response.ok) {
+                navigate('/profile')
+                toast.success(`${movie.title} added to Watchlist!`)
+            }
         } catch (e) {
             console.error(`Error: ${e}`)
         }
@@ -112,6 +115,7 @@ export default function MovieDetail() {
 
             if (ratedItemDetails.watched) {
                 navigate('/profile')
+                toast(`${movie.title} already watched.`)
                 return
             }
 
@@ -126,6 +130,7 @@ export default function MovieDetail() {
                 console.error(`Failed to update Movie: ${movie.id}`)
             } else {
                 navigate('/profile')
+                toast.success(`${movie.title} marked as watched!`)
             }
         } else {
             const response = await tryFetch(postURL, {
@@ -138,7 +143,10 @@ export default function MovieDetail() {
                 console.error(
                     `Failed to add Movie: ${movie.id} to watched list: ${response.message}`
                 )
-            } else navigate('/profile')
+            } else {
+                navigate('/profile')
+                toast.success(`${movie.title} marked as watched!`)
+            }
         }
     }
 

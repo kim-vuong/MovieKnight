@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import MovieCard from './MovieCard'
 import { useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 import '../vanilla/movie-list.css'
 import '../vanilla/movie-card.css'
@@ -61,6 +63,7 @@ function MovieSearch() {
         const addresult = await fetch(addURL, postConfig)
         if (addresult.ok) {
             console.log('Successful')
+            toast.success(`Successfully added to our Movie Library!`)
         } else {
             alert('Failed to add movie')
         }
@@ -70,7 +73,7 @@ function MovieSearch() {
         fetchData()
     }, [])
     return (
-        <div className="main-containers">
+        <div className="main-containers mb-[32rem]">
             <h1 className="mv-list-title">Add a Movie to our Database</h1>
 
             <div className="mv-list-searchbar-container">
@@ -96,41 +99,30 @@ function MovieSearch() {
                     </button>
                 </form>
             </div>
-
-            {/* <div>
-                <dialog className="block p-1 rounded shadow-lg bg-primary h-10">
-                    <form
-                        className="flex justify-center gap-3"
-                        onSubmit={handleSubmit}
-                    >
-                        <input
-                            className="p-1 pl-2 pr-2 text-black rounded"
-                            type="text"
-                            name="query"
-                            id="query"
-                            value={query}
-                            onChange={(e) => setQuery(e.target.value)}
-                            placeholder="Search for a Movie"
-                        />
-                        <button className="pl-2 pr-2 bg-orange-400 rounded">
-                            Search
-                        </button>
-                    </form>
-                </dialog>
-            </div> */}
             <div>
-                <div className="mt-28 grid grid-cols-1 gap-4 md:grid-cols-5">
-                    {movies.map((movie) => {
-                        return (
-                            <MovieCard
-                                key={movie.tmdb_id}
-                                movie={movie}
-                                buttonHandler={() => handleAdd(movie.tmdb_id)}
-                                buttonName={movie.title}
-                            />
-                        )
-                    })}
-                </div>
+                {!movies.length ? (
+                    <div className="text-center">
+                        <p className="text-xl text-white font-dmSans">
+                            Find any movie here, from timeless classics to the
+                            latest releases!
+                        </p>
+                    </div>
+                ) : (
+                    <div className="mt-28 grid grid-cols-1 gap-4 md:grid-cols-5">
+                        {movies.map((movie) => {
+                            return (
+                                <MovieCard
+                                    key={movie.tmdb_id}
+                                    movie={movie}
+                                    buttonHandler={() =>
+                                        handleAdd(movie.tmdb_id)
+                                    }
+                                    buttonName={movie.title}
+                                />
+                            )
+                        })}
+                    </div>
+                )}
             </div>
         </div>
     )

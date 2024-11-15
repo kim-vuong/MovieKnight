@@ -28,7 +28,7 @@ function MovieList() {
     }, [])
     return (
         <div className="main-containers">
-            <h1 className="mv-list-title">Movies in our Database</h1>
+            <h1 className="mv-list-title">Browse our Movie Library</h1>
             <div className="mv-list-searchbar-container">
                 <form id="searchBar" className="mv-list-searchbar d-flex">
                     <input

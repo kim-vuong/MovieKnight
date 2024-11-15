@@ -83,7 +83,7 @@ export default function Nav() {
                         } `}
                     >
                         <NavLink to="/movies" className="all-nav-links">
-                            ALL MOVIES
+                            BROWSE MOVIES
                         </NavLink>
                         {loggedInAdd}
                         <NavLink

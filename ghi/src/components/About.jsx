@@ -6,7 +6,7 @@ export default function About() {
             <div className="text-9xl font-bold tracking-tight blur-[1px] mb-10 text-emerald-400">
                 Browse
             </div>
-            <div className="section-1 flex justify-between mb-40">
+            <div className="section-1 flex justify-between mb-28">
                 <div>
                     <h2 className="font-bold text-4xl text-emerald-600 mb-10">
                         Browse all of our Movies
@@ -17,10 +17,10 @@ export default function About() {
                             thought-provoking documentaries, or epic fantasy
                             adventures, you'll find something to suit your mood.
                             With our user-friendly interface, you can easily
-                            browse through our extensive movie library. Create
-                            and curate personalized watchlists, discover hidden
-                            gems, add your own reviews, and get recommendations
-                            based on your viewing history and preferences.
+                            browse through our extensive movie library and
+                            manuever through a medley of options. Discover
+                            hidden gems, leave your own reviews, and view other
+                            users opinions on movies!
                         </p>
                     </div>
                     <Link
@@ -39,7 +39,7 @@ export default function About() {
             <div className="text-9xl text-center font-bold tracking-tight blur-[1px] mb-10 text-indigo-400">
                 Curate
             </div>
-            <div className="section-2 flex justify-between gap-40 mb-40 font-dmSans">
+            <div className="section-2 flex justify-between gap-40 mb-28 font-dmSans">
                 <img
                     src="public/quickadd.png"
                     alt="How to quickly add a movie to your watchlist, watched, or add a review"

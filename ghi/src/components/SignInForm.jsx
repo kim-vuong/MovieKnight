@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Navigate, Link, useNavigate } from 'react-router-dom'
+import aven from '../assets/hero-mv/aven.png'
 
 import useAuthService from '../hooks/useAuthService'
 import '../vanilla/signup.css'
@@ -34,10 +35,10 @@ export default function SignInForm() {
     }
 
     return (
-        <div className="flex justify-center items-center h-[50vh] mt-44 main-containers si">
+        <div className="flex justify-center items-center h-full mt-44 main-containers si relative">
             <form
                 onSubmit={handleFormSubmit}
-                className="border-t-2 border-b-2 rounded-xl border-slate-500 py-8 px-20"
+                className="border-t-2 border-b-2 rounded-xl border-slate-500 py-8 px-20 z-10"
             >
                 <div className="flex flex-col gap-3 px-20 py-4">
                     <div className="si-header flex flex-col items-center">
@@ -88,6 +89,9 @@ export default function SignInForm() {
                     </p>
                 </div>
             </form>
+            <div className="opacity-80 absolute z-0 right-24 top-40">
+                <img src={aven} alt="Avengers Poster" className="bg-mv-image" />
+            </div>
         </div>
     )
 }

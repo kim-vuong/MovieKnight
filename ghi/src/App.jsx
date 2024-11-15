@@ -11,7 +11,10 @@ if (!API_HOST) {
 
 function App() {
     const location = useLocation()
-    const isProfilePage = location.pathname === '/profile'
+    const nonFooterPages =
+        location.pathname === '/profile' ||
+        location.pathname === '/signin' ||
+        location.pathname === '/signup'
 
     return (
         <div className="App">
@@ -21,7 +24,7 @@ function App() {
             <div>
                 <Outlet />
             </div>
-            {!isProfilePage && <Footer />}
+            {!nonFooterPages && <Footer />}
         </div>
     )
 }

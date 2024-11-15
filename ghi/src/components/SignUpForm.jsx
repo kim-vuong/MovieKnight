@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Navigate, Link } from 'react-router-dom'
+import j2 from '../assets/hero-mv/j2.jpg'
 
 import useAuthService from '../hooks/useAuthService'
 import '../vanilla/signup.css'
@@ -23,10 +24,10 @@ export default function SignInForm() {
     }
 
     return (
-        <div className="flex justify-center items-center h-[50vh] mt-44 main-containers su">
+        <div className="flex justify-center items-center h-full mt-44 main-containers su relative pb-40">
             <form
                 onSubmit={handleFormSubmit}
-                className="border-t-2 border-b-2 rounded-xl border-slate-500 py-10"
+                className="border-t-2 border-b-2 rounded-xl border-slate-500 py-10 z-1"
             >
                 <div className="flex flex-col gap-3 px-20 py-4">
                     <div className="su-header">
@@ -94,6 +95,9 @@ export default function SignInForm() {
                     </p>
                 </div>
             </form>
+            <div className="absolute opacity-70 z-0 top-40 left-10">
+                <img src={j2} alt="Joker Poster" className="bg-mv-image" />
+            </div>
         </div>
     )
 }

@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function About() {
     return (
         <section className="main-containers mt-20">
@@ -6,7 +8,7 @@ export default function About() {
                     <h2 className="font-bold text-4xl text-[#d52b1e] mb-10">
                         Browse all of our Movies
                     </h2>
-                    <div className="w-[85%] text-lg text-white leading-7">
+                    <div className="w-[85%] text-lg text-white leading-7 mb-14">
                         <p>
                             Whether you're a fan of fast-paced thrillers,
                             thought-provoking documentaries, or epic fantasy
@@ -18,6 +20,12 @@ export default function About() {
                             based on your viewing history and preferences.
                         </p>
                     </div>
+                    <Link
+                        to="/movies"
+                        className="bg-[#c0c0c0] text-white font-semibold rounded-full px-4 py-3 text-md"
+                    >
+                        Browse Movies
+                    </Link>
                 </div>
                 <img
                     src="public/browse.png"

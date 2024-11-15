@@ -62,7 +62,7 @@ export default function Nav() {
         <nav className="nav-bar navbar-dark text-white">
             <div className="nav-left-right">
                 <div className="nav-blocks">
-                    <div className="nav-logo-title">
+                    <div className="nav-logo-title z-50">
                         <NavLink to="/">
                             <img
                                 src={knightLogo}

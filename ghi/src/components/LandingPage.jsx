@@ -30,8 +30,14 @@ export default function LandingPage() {
     return (
         <>
             <div className="main-containers lp-main">
-                <h1 className="lp-main-h1">Your Ultimate Film Companion</h1>
-                <p className="lp-main-subtitle">
+                <h1 className="lp-main-h1 blur-[.7px] text-rose-500 mb-2">
+                    Your&nbsp;
+                    <span className="text-[#d52b1e] underline underline-offset-8 decoration-white">
+                        Ultimate
+                    </span>
+                    &nbsp;Film Companion
+                </h1>
+                <p className="lp-main-subtitle text-neutral-300">
                     Curate, Review, and Celebrate Together
                 </p>
                 <p className="lp-main-descrip">

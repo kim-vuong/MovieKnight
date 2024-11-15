@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export default function Footer() {
     return (
         <footer className="bg-neutral-700/20 mt-40 font-dmSans">
-            <div className="main-containers flex items-center gap-80">
+            <div className="main-containers flex items-center justify-between">
                 <div className="nav-logo-title -mt-36">
                     <div>
                         <img

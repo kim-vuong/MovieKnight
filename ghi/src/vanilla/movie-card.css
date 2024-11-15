@@ -16,7 +16,7 @@
 }
 
 .mv-card:hover .mv-card-options {
-    background: black;
+    /* background: black; */
     padding: 0.7rem 0.2rem;
     border-radius: 8px;
     position: absolute;

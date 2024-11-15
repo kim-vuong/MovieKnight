@@ -31,7 +31,7 @@ export default function MovieCard({ movie, buttonHandler, showdetailbutton }) {
                         />
                     </Link>
                     {user ? (
-                        <div className="mv-card-options">
+                        <div className="mv-card-options bg-black/70">
                             <Link onClick={handleWatchedClick}>
                                 <i
                                     className="fa-solid fa-eye fa-lg icon-hover"

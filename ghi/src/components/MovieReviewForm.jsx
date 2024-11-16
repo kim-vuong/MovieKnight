@@ -2,6 +2,8 @@ import useAuthService from '../hooks/useAuthService'
 import { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { tryFetch } from '../utils'
+import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 import '../vanilla/movie-review.css'
 
@@ -74,6 +76,7 @@ export default function MovieReviewForm() {
 
             if (response.ok) {
                 navigate('/profile')
+                toast.success(`Thanks for reviewing: ${movie.title}!`)
             }
         } catch (e) {
             console.error(`Error: ${e}`)

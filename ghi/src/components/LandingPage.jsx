@@ -32,7 +32,7 @@ export default function LandingPage() {
             <div className="main-containers lp-main">
                 <h1 className="lp-main-h1 blur-[.7px] text-rose-500 mb-2">
                     Your&nbsp;
-                    <span className="text-[#d52b1e] underline underline-offset-8 decoration-white">
+                    <span className="text-[#d52b1e] underline underline-offset-8 decoration-white/70">
                         Ultimate
                     </span>
                     &nbsp;Film Companion

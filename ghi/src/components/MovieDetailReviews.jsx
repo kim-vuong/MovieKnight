@@ -1,17 +1,15 @@
 import { Link } from 'react-router-dom'
 
 export default function MovieDetailReviews({ reviews, movie }) {
-    console.log(reviews)
-
-    const allRatedItemsHaveReviews = reviews.every((review) => review.review)
+    const noReviewsOrEmptyReviews =
+        reviews.length === 0 ||
+        reviews.every((review) => !review.review?.trim())
 
     return (
         <section className="mv-detail-reviews-container mt-40 border-t-2 border-b-2 rounded-xl border-slate-400 p-5">
             <h1 className="text-3xl text-white font-semibold">User Reviews</h1>
             <div className="mv-detail-single-review mt-14 flex-row">
-                {!allRatedItemsHaveReviews ||
-                reviews.length === 0 ||
-                (reviews.length === 1 && reviews[0].review === '') ? (
+                {noReviewsOrEmptyReviews ? (
                     <div className="no-review-container text-gray-300">
                         <p>
                             Currently no reviews for the movie "{movie.title}"
